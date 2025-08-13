@@ -1,0 +1,32 @@
+
+Differences betwen Arrow functions and normal funcitions:
+
+La principal diferencia es su sintaxis, ya que las funciones flecha tienen una sintaxis mucho más corta que una función normal. Además, 
+las funciones flecha no necesitan de la palabra reservada "function" al inicio de la escritura y, en muchas ocasiones, las funciones flecha 
+no requieren uso de los caracteres "{" "}" (llaves). Otra diferencia es el uso de "this": cuando se usa una función normal dentro de un objeto,
+al usar this.variable, la función apuntará al objeto que contiene dicha función; en cambio, al usar this.variable dentro de un objeto, la función
+flecha apuntará a la variable externa con el mismo nombre que se está intentando acceder con el this. Las funciones normales tienen arguments; 
+al usarlo mostrará todos los datos usados en esa función y los unirá en un arreglo, mientras que la función flecha no tiene arguments: al usarlo 
+intentará buscarlo dentro del contexto externo a la función. Además, las funciones normales pueden usarse como constructores para los objetos, 
+lo que permite crear instancias de ese objeto mediante el constructor; en cambio, las funciones no sirven como constructores.
+
+Example (Function in arrow form and regular form that recive a number and calculate if the number is either odd or even): 
+  
+-Regular form: 
+
+  function parImpar(a){
+        if(a%2 == 0){
+            console.log("el numero: " + a + " es par");
+        }else{
+            console.log("el numero: " + a + " no es par");
+        }
+    }
+
+-Arrow form:
+
+  const result = (a)=> {
+    if(a%2 == 0){
+        console.log("el numero: " + a + " es par");
+    }else{
+        console.log("el numero: " + a + " no es par");
+    }}
