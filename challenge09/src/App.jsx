@@ -1,10 +1,10 @@
 import React from "react";
-import StackPage from "./StackPage";
+import QueuePage from "./QueuePage";
 
 function App() {
   return (
     <div>
-      <StackPage />
+      <QueuePage />
     </div>
   );
 }
