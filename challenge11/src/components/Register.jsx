@@ -62,6 +62,7 @@ const Registro = () => {
             <button onClick={handleGoogleLogin} style={{marginTop: '10px'}}>Login with Google</button>
             <button onClick={handleLogout} style={{marginTop: '10px'}}>Logout</button>
             <button onClick={() => navigate('/crud')} style={{marginTop: '10px'}}>Ir a CRUD</button>
+            <button onClick={() => navigate('/realtime')} style={{marginTop: '10px'}}>Ir a Realtime DB</button>
         </>
     )
 }

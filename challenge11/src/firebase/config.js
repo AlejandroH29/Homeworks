@@ -5,6 +5,8 @@ import { initializeApp } from "firebase/app";
 import {getAuth} from "firebase/auth"
 import {getStorage} from "firebase/storage"
 import {getFirestore} from "firebase/firestore"
+
+import {getDatabase, ref, set, push, onValue} from "firebase/database";
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyCps1rHDI-Juoi8wdZU9cKFjwKgz_hgGp4",
@@ -20,4 +22,5 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(); 
 const firebaseStorage = getStorage();
 const db = getFirestore();
-export {app, auth, firebaseStorage, db}
+const realTimeDb = getDatabase(app);
+export {app, auth, firebaseStorage, db, realTimeDb, ref, set, push, onValue}; 
