@@ -11,7 +11,7 @@ const Registro = () => {
         const dispatch = useDispatch()
         const navigate = useNavigate()
         const { email } = useSelector(state => state.auth)
-    const handleGoogleLogin = async () => {
+        const handleGoogleLogin = async () => {
         await dispatch(loginWithGoogle());
         navigate('/user');
     };
@@ -61,7 +61,7 @@ const Registro = () => {
             </form>
             <button onClick={handleGoogleLogin} style={{marginTop: '10px'}}>Login with Google</button>
             <button onClick={handleLogout} style={{marginTop: '10px'}}>Logout</button>
-            {/* 'Ir a página de usuario' button removed as requested */}
+            <button onClick={() => navigate('/crud')} style={{marginTop: '10px'}}>Ir a CRUD</button>
         </>
     )
 }
