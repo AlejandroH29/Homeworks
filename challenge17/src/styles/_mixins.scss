@@ -1,0 +1,17 @@
+@use "../_variables.scss" as vars;
+@use "sass:color";
+
+@mixin card($radius: 12px) {
+  background: color.adjust(vars.$card-bg, $alpha: 0%);
+  border-radius: $radius;
+  padding: 0.9rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+}
+
+@mixin btn-primary {
+  background: linear-gradient(90deg, vars.$accent, vars.$accent-hover);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: vars.$radius;
+}

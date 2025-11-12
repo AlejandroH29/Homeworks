@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import Stack from "./Stack";
+import styles from "./StackPage.module.scss";
 
 const StackPage = () => {
   const stackRef = useRef(null);
@@ -46,11 +47,11 @@ const StackPage = () => {
   const reversed = [...bookStack].reverse();
 
   return (
-    <div>
-      <h2>Pila de Libros</h2>
+    <div className={styles.container}>
+      <h2 className={styles.title}>Pila de Libros</h2>
 
-      <form onSubmit={handleSubmit}>
-        <input
+      <form className={styles.form} onSubmit={handleSubmit}>
+        <input className={styles.input}
           type="text"
           name="name"
           placeholder="Nombre"
@@ -58,7 +59,7 @@ const StackPage = () => {
           onChange={handleChange}
           required
         />
-        <input
+        <input className={styles.input}
           type="text"
           name="isbn"
           placeholder="ISBN"
@@ -66,7 +67,7 @@ const StackPage = () => {
           onChange={handleChange}
           required
         />
-        <input
+        <input className={styles.input}
           type="text"
           name="author"
           placeholder="Autor"
@@ -74,7 +75,7 @@ const StackPage = () => {
           onChange={handleChange}
           required
         />
-        <input
+        <input className={styles.input}
           type="text"
           name="editorial"
           placeholder="Editorial"
@@ -82,14 +83,15 @@ const StackPage = () => {
           onChange={handleChange}
           required
         />
-        <button type="submit">Agregar Libro</button>
+        <button className={styles.submit} type="submit">Agregar Libro</button>
       </form>
 
-      <h3>Libros en la Pila (top → bottom):</h3>
-      <ul>
+      <h3 className={styles.subtitle}>Libros en la Pila (top → bottom):</h3>
+      <ul className={styles.bookList}>
         {reversed.map((book, index) => (
-          <li key={index}>
-            <b>{book.name}</b> — {book.author} (ISBN: {book.isbn}, {book.editorial})
+          <li className={styles.bookItem} key={index}>
+            <b>{book.name}</b>
+            <span className={styles.meta}> — {book.author} (ISBN: {book.isbn}, {book.editorial})</span>
           </li>
         ))}
       </ul>

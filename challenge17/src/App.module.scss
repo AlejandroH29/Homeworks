@@ -1,0 +1,12 @@
+@use "./_variables.scss" as vars;
+@use "sass:color";
+
+.appShell {
+  max-width: 980px;
+  margin: 2rem auto;
+  padding: 1.25rem;
+  border-radius: 14px;
+  background: color.adjust(vars.$bg-dark, $lightness: 6%);
+  box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+  color: vars.$text-light;
+}
