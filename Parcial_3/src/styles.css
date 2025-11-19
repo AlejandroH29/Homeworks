@@ -1,0 +1,65 @@
+:root{
+  --bg:#f4f6f8;
+  --panel:#ffffff;
+  --accent:#2563eb;
+  --muted:#6b7280;
+}
+
+*{box-sizing:border-box;font-family:Arial, Helvetica, sans-serif}
+body{margin:0;background:var(--bg);color:#111}
+.navbar{background:var(--panel);border-bottom:1px solid #e5e7eb;padding:12px 20px;position:sticky;top:0;z-index:10}
+.nav-inner{display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:0 auto}
+.brand{font-weight:700}
+.links a{margin-left:14px;text-decoration:none;color:var(--muted)}
+.links a.active{color:var(--accent);font-weight:700}
+.app-content{max-width:1100px;margin:20px auto;padding:0 16px}
+.page{padding:20px}
+.two-col{display:flex;gap:20px}
+.panel{background:var(--panel);padding:16px;border-radius:8px;box-shadow:0 6px 14px rgba(0,0,0,0.04)}
+.panel.small{width:320px}
+.panel.large{flex:1}
+.card{background:#fff;border-radius:8px;padding:12px;margin-bottom:12px;border:1px solid #eef2ff}
+.list{list-style:none;padding:0;margin:0}
+.list-item{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #f3f4f6}
+.link-city{text-decoration:none;color:var(--accent)}
+.zone-list{list-style:none;padding-left:18px}
+.zone-item{margin-bottom:8px}
+.zone-row{display:flex;align-items:center;gap:10px}
+.zone-title{font-weight:600}
+.btn-small{width:28px;height:28px;border-radius:6px;border:1px solid #e5e7eb;background:#fff;cursor:pointer}
+
+.zones-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+.zones-modal-content {
+  width: 90%;
+  max-width: 900px;
+  height: 80%;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.zones-modal-header {
+  padding: 10px 14px;
+  background: #f3f4f6;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom: 1px solid #e5e7eb;
+}
+.zones-modal-body {
+  flex: 1;
+  padding: 8px;
+}
+
+.zones-legend{display:flex;gap:12px;margin-top:6px;font-size:13px;align-items:center}
+.legend-item{display:inline-flex;align-items:center;gap:8px;color:#374151}
+.legend-dot{width:12px;height:12px;border-radius:50%;display:inline-block;box-shadow:0 1px 2px rgba(0,0,0,0.08)}
